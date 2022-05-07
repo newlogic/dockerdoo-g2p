@@ -4,13 +4,13 @@ networks:
   default:
     external:
       name: cloudbuild
-  odoonet:
+  g2p-odoonet:
 
 volumes:
-  odoo-data:
-  odoo-testlogs:
-  odoo-modules:
-  psql:
+  g2p-odoo-data:
+  g2p-odoo-testlogs:
+  g2p-odoo-modules:
+  g2p-psql:
 
 services:
   odoo:
@@ -25,20 +25,20 @@ services:
       # Host paths (.ssh configuration)
       - ~/.ssh/:/opt/odoo/.ssh/:cached
       # Named volumes
-      - odoo-data:${ODOO_DATA_DIR}
-      - odoo-testlogs:${ODOO_LOGS_DIR}
-      - odoo-modules:${ODOO_EXTRA_ADDONS}
+      - g2p-odoo-data:${ODOO_DATA_DIR}
+      - g2p-odoo-testlogs:${ODOO_LOGS_DIR}
+      - g2p-odoo-modules:${ODOO_EXTRA_ADDONS}
     depends_on:
       - db
 
     networks:
-      odoonet:
+      g2p-odoonet:
   # ------------------------
   db:
     image: postgres:${PSQL_VERSION}
     restart: unless-stopped
     volumes:
-      - psql:/var/lib/postgresql/data/pgdata
+      - g2p-psql:/var/lib/postgresql/data/pgdata
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
@@ -46,4 +46,4 @@ services:
       - PGDATA=/var/lib/postgresql/data/pgdata
 
     networks:
-      odoonet:
+      g2p-odoonet:

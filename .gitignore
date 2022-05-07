@@ -1,11 +1,12 @@
 # Odoo testlogs & chrome test screencasts / screenshots
 _testlogs/
 
-/custom/**
-!/custom/**/.gitkeep
-/src/**
-!/src/**/
-!/src/**/.gitkeep
+# /custom/**
+# !/custom/**/.gitkeep
+/custom/dynamic_odoo/
+# /src/**
+# !/src/**/
+# !/src/**/.gitkeep
 .gitmodules
 *.sh
 
