@@ -10,3 +10,6 @@
 [submodule "custom/queue"]
 	path = custom/queue
 	url = git@github.com:OCA/queue.git
+[submodule "custom/connector-interfaces"]
+	path = custom/connector-interfaces
+	url = git@github.com:OCA/connector-interfaces.git
