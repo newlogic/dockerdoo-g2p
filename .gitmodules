@@ -13,3 +13,6 @@
 [submodule "custom/connector-interfaces"]
 	path = custom/connector-interfaces
 	url = git@github.com:OCA/connector-interfaces.git
+[submodule "custom/social"]
+	path = custom/social
+	url = git@github.com:OCA/social.git
