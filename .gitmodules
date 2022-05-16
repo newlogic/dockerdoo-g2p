@@ -1,9 +1,9 @@
-[submodule "custom/newlogic-g2p-erp"]
-	path = custom/newlogic-g2p-erp
-	url = git@github.com:newlogic/newlogic-g2p-erp.git
-[submodule "custom/newlogic-g2p-erp-community-plugins"]
-	path = custom/newlogic-g2p-erp-community-plugins
-	url = git@github.com:newlogic/newlogic-g2p-erp-community-plugins.git
+[submodule "custom/newlogic-g2p"]
+	path = custom/newlogic-g2p
+	url = git@github.com:newlogic/newlogic-g2p.git
+[submodule "custom/newlogic-g2p-community-plugins"]
+	path = custom/newlogic-g2p-community-plugins
+	url = git@github.com:newlogic/newlogic-g2p-community-plugins.git
 [submodule "custom/connector"]
 	path = custom/connector
 	url = git@github.com:OCA/connector.git
