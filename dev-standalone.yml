@@ -20,6 +20,14 @@ services:
     depends_on: ["db"]
     networks:
       - g2p-odoonet
+  mail_outgoing:
+    restart: always
+    image: newlogic42/mailtrap
+    ports:
+      - "8025:80"
+    networks:
+      - g2p-odoonet
+
   # ------------------------
 
   odoo:
