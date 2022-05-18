@@ -13,8 +13,24 @@ volumes:
   g2p-psql:
 
 services:
+  #Nginx Service
+  webserver:
+    image: nginx:alpine
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "8068:80"
+    volumes:
+      - ./conf/nginx/conf.d/:/etc/nginx/conf.d/
+      - ./conf/nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - odoo
+    links:
+      - odoo:odoo
+    networks:
+      g2p-odoonet:
   odoo:
-    image: iterativodo/dockerdoo:${ODOO_VERSION}
+    image: newlogic42/dockerdoo:${ODOO_VERSION}
     env_file: .env
     
     restart: unless-stopped

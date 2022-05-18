@@ -16,3 +16,12 @@
 [submodule "custom/social"]
 	path = custom/social
 	url = git@github.com:OCA/social.git
+[submodule "custom/reporting-engine"]
+	path = custom/reporting-engine
+	url = git@github.com:OCA/reporting-engine.git
+[submodule "custom/server-ux"]
+	path = custom/server-ux
+	url = git@github.com:OCA/server-ux.git
+[submodule "custom/server-tools"]
+	path = custom/server-tools
+	url = git@github.com:OCA/server-tools.git
