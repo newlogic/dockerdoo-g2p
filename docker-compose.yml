@@ -21,8 +21,8 @@ services:
     ports:
       - "8068:80"
     volumes:
-      - ./conf/nginx/conf.d/:/etc/nginx/conf.d/
-      - ./conf/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./config/nginx/conf.d/:/etc/nginx/conf.d/
+      - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf
     depends_on:
       - odoo
     links:

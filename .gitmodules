@@ -24,4 +24,13 @@
 	url = git@github.com:OCA/server-ux.git
 [submodule "custom/server-tools"]
 	path = custom/server-tools
-	url = git@github.com:OCA/server-tools.git
+	url = git@github.com:newlogic/oca-server-tools.git
+[submodule "custom/connector-telephony"]
+	path = custom/connector-telephony
+	url = git@github.com:OCA/connector-telephony.git
+[submodule "odoo-formio"]
+	path = custom/odoo-formio
+	url = git@github.com:novacode-nl/odoo-formio.git
+[submodule "custom/cybro-addons"]
+	path = custom/cybro-addons
+	url = git@github.com:CybroOdoo/CybroAddons.git
